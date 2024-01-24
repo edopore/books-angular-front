@@ -42,7 +42,6 @@ export class BookDisplayComponent {
     this.httpClient
       .patch('http://localhost:5000/api/v1/book/' + this.id, this.bodyRequest)
       .subscribe((data) => {
-        console.log(data);
       });
     this.router.navigate(['/']);
   }
