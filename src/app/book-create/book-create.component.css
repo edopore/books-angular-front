@@ -1,0 +1,12 @@
+.form {
+  margin: auto;
+  width: 50% !important;
+}
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+.input-width {
+  width: 550px;
+}
