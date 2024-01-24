@@ -1,7 +1,6 @@
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { Component, inject } from '@angular/core';
-import { BookDisplayComponent } from '../book-display/book-display.component';
-import { RouterLink, Router } from '@angular/router';
+import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-books-display',
@@ -11,11 +10,12 @@ import { RouterLink, Router } from '@angular/router';
   styleUrl: './books-display.component.css',
 })
 export class BooksDisplayComponent {
-  httpClient = inject(HttpClient);
   data: any = [];
   id: any = '';
 
-  ngOnInit(): void {
+  constructor(private httpClient: HttpClient) {}
+
+  ngOnInit() {
     this.fetchData();
   }
 

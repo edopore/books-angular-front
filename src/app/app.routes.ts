@@ -11,11 +11,6 @@ export const routes: Routes = [
     component: BooksDisplayComponent,
   },
   {
-    path: 'view-books',
-    title: 'Books API',
-    component: BooksDisplayComponent,
-  },
-  {
     path: 'update/:id',
     title: 'Update Book',
     component: BookDisplayComponent,
