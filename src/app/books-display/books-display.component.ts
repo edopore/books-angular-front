@@ -24,7 +24,6 @@ export class BooksDisplayComponent {
       .get('http://localhost:5000/api/v1/books')
       .subscribe((data) => {
         this.data = data;
-        console.log(data);
       });
   }
 
@@ -33,7 +32,6 @@ export class BooksDisplayComponent {
     this.httpClient
       .delete('http://localhost:5000/api/v1/book/' + id)
       .subscribe((data) => {
-        console.log(data);
         this.fetchData();
       });
   }
