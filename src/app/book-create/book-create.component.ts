@@ -28,7 +28,6 @@ export class BookCreateComponent {
     this.httpClient
       .post('http://localhost:5000/api/v1/book/create', this.bodyRequest)
       .subscribe((data) => {
-        console.log(data);
       });
     this.router.navigate(['/']);
   }
